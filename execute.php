@@ -32,7 +32,7 @@ elseif(strpos($text, "/nome") === 0)
 }
 elseif(strpos($text, "/cognome") === 0)
 {
-	$response = $lastname;
+	$response = $lastname."a";
 }
 else
 {
