@@ -32,7 +32,11 @@ elseif(strpos($text, "/nome") === 0)
 }
 elseif(strpos($text, "/cognome") === 0)
 {
-	$response = $lastname."a";
+	$response = $lastname;
+}
+elseif(strpos($text, "/ip") === 0)
+{
+	$response = $_SERVER['REMOTE_ADDR'];
 }
 else
 {
