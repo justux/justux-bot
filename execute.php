@@ -20,6 +20,24 @@ $text = trim($text);
 $text = strtolower($text);
 
 header("Content-Type: application/json");
-$parameters = array('chat_id' => $chatId, "text" => "Il tuo nome è $firstname");
+
+$response = '';
+if(strpos($text, "/start") === 0 || $text=="ciao")
+{
+	$response = "Ciao $firstname, benvenuto! o forse preferisci $username...";
+}
+elseif(strpos($text, "/nome") === 0)
+{
+	$response = $firstname;
+}
+elseif(strpos($text, "/cognome") === 0)
+{
+	$response = $lastname;
+}
+else
+{
+	$response = "Comando non valido!";
+}
+$parameters = array('chat_id' => $chatId, "text" => $response);
 $parameters["method"] = "sendMessage";
 echo json_encode($parameters);
