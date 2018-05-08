@@ -22,17 +22,17 @@ $text = strtolower($text);
 header("Content-Type: application/json");
 
 if($text == '/prima'){
-  $parameters = array('chat_id' => $chatId, "text" => $text);
+  $parameters = array('chat_id' => $chatId, "text" => 'Primi quattro: ');
   $parameters["method"] = "sendMessage";
   $parameters["reply_markup"] = '{ "keyboard": [["uno"], ["due"], ["tre"], ["quattro"]], "one_time_keyboard": false}';
 
 }else if($text=='/secondi'){
-  $parameters = array('chat_id' => $chatId, "text" => $text);
+  $parameters = array('chat_id' => $chatId, "text" => 'Secondi quattro: ');
   $parameters["method"] = "sendMessage";
   $parameters["reply_markup"] = '{ "keyboard": [["cinque"], ["sei"], ["sette"], ["otto"]], "one_time_keyboard": false}';
 
 }else{
-  $parameters = array('chat_id' => $chatId, "text" => $text.' by Justux');
+  $parameters = array('chat_id' => $chatId, "text" => $text);
   $parameters["method"] = "sendMessage";
 }
 echo json_encode($parameters);
