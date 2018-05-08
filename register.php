@@ -1,8 +1,8 @@
 <?php
 
 // PARAMETRI DA MODIFICARE
-$WEBHOOK_URL = 'https://JustuxBot.herokuapp.com/execute.php';
-$BOT_TOKEN = '326644923:AAEuXEILCoQc4dUwVwGmo6ZOxIk12fPjPM0';
+$WEBHOOK_URL = 'https://ripetobot.herokuapp.com/execute.php';
+$BOT_TOKEN = '567229226:AAEmdqg09TSTBXoueevRTI4STD8WtWPDYLc';
 
 // NON APPORTARE MODIFICHE NEL CODICE SEGUENTE
 $API_URL = 'https://api.telegram.org/bot' . $BOT_TOKEN .'/';
