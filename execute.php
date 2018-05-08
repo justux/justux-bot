@@ -22,12 +22,12 @@ $text = strtolower($text);
 header("Content-Type: application/json");
 
 if($text == '/prima'){
-  $parameters = array('chat_id' => $chatId, "text" => '');
+  $parameters = array('chat_id' => $chatId, "text" => $text);
   $parameters["method"] = "sendMessage";
   $parameters["reply_markup"] = '{ "keyboard": [["uno"], ["due"], ["tre"], ["quattro"]], "one_time_keyboard": false}';
 
 }else if($text=='/secondi'){
-  $parameters = array('chat_id' => $chatId, "text" => '');
+  $parameters = array('chat_id' => $chatId, "text" => $text);
   $parameters["method"] = "sendMessage";
   $parameters["reply_markup"] = '{ "keyboard": [["cinque"], ["sei"], ["sette"], ["otto"]], "one_time_keyboard": false}';
 
