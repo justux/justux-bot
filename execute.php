@@ -30,6 +30,9 @@ if($text == '/prima'){
   $parameters = array('chat_id' => $chatId, "text" => 'Secondi quattro: ');
   $parameters["method"] = "sendMessage";
   $parameters["reply_markup"] = '{ "keyboard": [["cinque"], ["sei"], ["sette"], ["otto"]], "one_time_keyboard": false}';
+}else if($text=='/inline'){
+  $keyboard = ['inline_keyboard' => [[['text' =>  'myText', 'callback_data' => 'myCallbackText']]]];
+  $parameters["reply_markup"] = json_encode($keyboard, true);
 
 }else{
   $parameters = array('chat_id' => $chatId, "text" => $text);
